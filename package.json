@@ -18,6 +18,7 @@
     "typescript": "~5.8.0"
   },
   "dependencies": {
-    "@circle-fin/developer-controlled-wallets": "^10.2.0"
+    "@circle-fin/developer-controlled-wallets": "^10.2.0",
+    "@openzeppelin/contracts": "^5.6.1"
   }
 }
