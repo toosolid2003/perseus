@@ -1,8 +1,7 @@
 # Purpose of the protocol
 Building the standard that turns blockchain transactions into compliant financial records. Financial data 
 is broken between crypto and accounting.
-The goal of this protocol is to automate the missing part between a transaction and its financially compliant expression,
-ie accounting data.
+The goal of this protocol is to automate the missing part between a transaction and its financially compliant expression,ie accounting data.
 
 ## Initial problematic situation
 The initial idea stems from 2 ends:
