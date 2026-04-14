@@ -45,6 +45,27 @@
         assertEq(uint(escrow.status()), uint(Escrow.Status.FUNDED));
         assertEq(token.balanceOf(address(escrow)), AMOUNT);
     }
+
+    function test_release_success() public  {
+        vm.startPrank(provider);
+        escrow.deposit();
+
+        vm.warp(block.timestamp + 7 days);
+        escrow.release();
+        vm.stopPrank();
+
+        assertEq(uint(escrow.status()), uint(Escrow.Status.RELEASED));
+    }
+
+    function test_refund_success()  public  {
+        vm.prank(provider);
+        escrow.deposit();
+
+        vm.prank(provider);
+        escrow.refund();
+
+        assertEq(uint(escrow.status()), uint(Escrow.Status.AWAITING_PAYMENT));
+    }
   }
 
   
